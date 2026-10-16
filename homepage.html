@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نكهة | أطباق شرقية بلمسة عصرية</title>
+  <meta name="description" content="نكهة: أشهى الأطباق الشرقية مع لمسة عصرية. اطلب الآن من القائمة.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Reem+Kufi:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#home" class="logo">نكهة</a>
+    <button class="nav-toggle" id="navToggle" aria-label="القائمة" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    <nav class="navbar" id="navbar">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">من نحن</a>
+      <a href="#product">أطباقنا</a>
+      <a href="#contact">التواصل</a>
+      <a href="menu.html" class="nav-cta"><i class="fas fa-utensils"></i> القائمة</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>نكهة... طعم بيجمعنا</h1>
+        <p>نقدم لك أشهى الأطباق الشرقية مع لمسة عصرية. نكهة تجمع بين التقاليد والابتكار في كل لقمة.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="menu.html">شوف القائمة واطلب الآن</a>
+          <a class="btn btn-ghost" href="#product">أطباق مميزة</a>
+        </div>
+      </div>
+      <div class="hero-img"><img src="r.jpg" alt="أطباق من مطعم نكهة"></div>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="section-title">حكاية نكهة</h2>
+      <p class="section-lead">بدأنا من مطبخ بيتي صغير، وبقي الطعم البيتي هو مقياسنا في كل طبق نقدمه.</p>
+      <div class="features">
+        <article><i class="fas fa-leaf"></i><h3>مكونات طازجة</h3><p>نختار خضارنا ولحومنا يوميًا ونحضّر كل طبق عند الطلب.</p></article>
+        <article><i class="fas fa-fire"></i><h3>وصفات أصيلة</h3><p>وصفات شرقية توارثناها، مع تقديم عصري يليق بسفرتك.</p></article>
+        <article><i class="fas fa-motorcycle"></i><h3>توصيل سريع</h3><p>يصلك طلبك ساخنًا وفي موعده إلى باب بيتك.</p></article>
+      </div>
+    </section>
+
+    <section class="section alt" id="product">
+      <h2 class="section-title">أطباق مميزة</h2>
+      <p class="section-lead">اختيارات زبائننا المفضلة هذا الأسبوع.</p>
+      <div class="dishes">
+        <figure><img src="fatteh.jpg" alt="فتة حمص" loading="lazy"><figcaption><h3>فتة حمص</h3><p>حمص دافئ وخبز مقرمش ولبن وصنوبر محمّص.</p></figcaption></figure>
+        <figure><img src="kanava-cheese-2.jpeg" alt="كنافة بالجبنة" loading="lazy"><figcaption><h3>كنافة بالجبنة</h3><p>جبنة ذائبة وكنافة ذهبية وقطر خفيف.</p></figcaption></figure>
+        <figure><img src="pasta.jpg" alt="باستا ألفريدو" loading="lazy"><figcaption><h3>باستا ألفريدو</h3><p>صوص كريمي مع قطع دجاج مشوي.</p></figcaption></figure>
+      </div>
+      <a class="btn btn-primary center" href="menu.html">شاهد القائمة كاملة</a>
+    </section>
+
+    <section class="section" id="contact">
+      <h2 class="section-title">تواصل معنا</h2>
+      <div class="contact-grid">
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> بيروت، لبنان</li>
+          <li><i class="fas fa-phone"></i> <a href="tel:+9613149809" dir="ltr">+961 3 149 809</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:rasha.alrifaii02@gmail.com">rasha.alrifaii02@gmail.com</a></li>
+          <li><i class="fas fa-clock"></i> يوميًا من 11 صباحًا حتى 12 منتصف الليل</li>
+        </ul>
+        <form class="contact-form" onsubmit="event.preventDefault();this.reset();alert('شكرًا لك! وصلتنا رسالتك.')">
+          <label>الاسم<input type="text" required></label>
+          <label>البريد الإلكتروني<input type="email" required></label>
+          <label>رسالتك<textarea rows="4" required></textarea></label>
+          <button class="btn btn-primary" type="submit">إرسال</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="logo">نكهة</span>
+    <p>© 2026 نكهة. جميع الحقوق محفوظة.</p>
+    <div class="social"><a href="#" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a><a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a></div>
+  </footer>
+
+  <script>
+    const t=document.getElementById('navToggle'),n=document.getElementById('navbar');
+    t.onclick=()=>t.setAttribute('aria-expanded',n.classList.toggle('open'));
+    n.querySelectorAll('a').forEach(a=>a.onclick=()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false')});
+  </script>
+</body>
+</html>

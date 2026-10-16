@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قائمة الطعام | نكهة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Reem+Kufi:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="homepage.html" class="logo">نكهة</a>
+    <div class="header-tools">
+      <a href="homepage.html" class="back"><i class="fas fa-arrow-right"></i> الرئيسية</a>
+      <button class="cart-toggle" id="cartOpen" aria-label="فتح السلة"><i class="fas fa-shopping-bag"></i><span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main class="product" id="product">
+    <h1 class="heading">رحلتك مع النكهات</h1>
+    <div class="toolbar">
+      <div class="search"><i class="fas fa-search"></i><input id="search" type="search" placeholder="ابحث عن طبق..." aria-label="بحث"></div>
+      <div class="chips" id="chips" role="tablist"></div>
+    </div>
+    <div id="menu"></div>
+    <p class="empty" id="empty" hidden>لا توجد أطباق مطابقة. جرّب كلمة بحث أخرى.</p>
+  </main>
+
+  <aside class="drawer" id="drawer" aria-label="سلة الطلب" aria-hidden="true">
+    <div class="drawer-head"><h2>طلبك</h2><button id="cartClose" aria-label="إغلاق"><i class="fas fa-times"></i></button></div>
+    <ul id="cartList"></ul>
+    <p class="empty" id="cartEmpty">السلة فارغة. أضف طبقًا من القائمة.</p>
+    <div class="drawer-foot">
+      <div class="total"><span>المجموع</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="btn btn-primary" id="checkout">إتمام الطلب</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast" role="status"></div>
+
+
+<!-- Checkout form -->
+<div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+  <form class="checkout-form" id="checkoutForm">
+    <div class="checkout-heading">
+      <h2>إتمام طلبك</h2>
+      <button type="button" id="checkoutClose" aria-label="إغلاق">×</button>
+    </div>
+
+    <p>أدخلي بياناتك لإرسال الطلب إلى مطعم نكهة.</p>
+
+    <label for="customerName">الاسم الكامل</label>
+    <input id="customerName" name="customer_name"
+           type="text" autocomplete="name" required maxlength="100">
+
+    <label for="customerPhone">رقم الهاتف</label>
+    <input id="customerPhone" name="customer_phone"
+           type="tel" autocomplete="tel" required maxlength="30">
+
+    <label for="customerAddress">عنوان التوصيل</label>
+    <textarea id="customerAddress" name="customer_address"
+              autocomplete="street-address" required maxlength="500"></textarea>
+
+    <label for="customerNotes">ملاحظات (اختياري)</label>
+    <textarea id="customerNotes" name="customer_notes"
+              maxlength="500"></textarea>
+
+    <div class="checkout-summary" id="checkoutSummary"></div>
+
+    <button type="submit" class="btn btn-primary" id="sendOrder">
+      إرسال الطلب
+    </button>
+
+    <p id="checkoutMessage" role="status" aria-live="polite"></p>
+  </form>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="menu.js"></script>
+</body>
+</html>
+
+</body>
+</body>
+</html>
